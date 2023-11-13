@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './globals.css' // tailwind css 
 import { ClerkProvider } from '@clerk/nextjs'
 import { Header } from '@/components/Header'
-import {shadesOfPurple } from '@clerk/themes';
+import { shadesOfPurple, dark, neobrutalism } from '@clerk/themes';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,25 +20,27 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: shadesOfPurple,
-        variables: { colorPrimary: 'blue' },
+        baseTheme: dark, // shadesOfPurple, dark, neobrutalism
+        elements: {
+          logoBox: "justify-center h-16", // add tailwind CSS classes
+        },
         layout: {
           socialButtonsPlacement: 'bottom',
           socialButtonsVariant: 'iconButton',
           termsPageUrl: '/term',
           privacyPageUrl: "/privacy-policy",
           helpPageUrl: "/contact",
-          logoLinkUrl: "/auth-logo.png",
+          logoImageUrl: "/auth-logo.png",
           logoPlacement: "inside"
         }
-      }} >
-
-      <html data-new-gr-c-s-check-loaded={true} data-gr-ext-installed={true} lang="en">
-        <body className={inter.className}>
-          <Header />
-          {children}
-        </body>
-      </html>
+      }}
+      >
+        <html data-new-gr-c-s-check-loaded={true} data-gr-ext-installed={true} lang="en">
+          <body className={inter.className}>
+            <Header />
+            {children}
+          </body>
+        </html>
     </ClerkProvider>
   )
 }
