@@ -1,4 +1,4 @@
-import { SignInButton, SignOutButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 
 // import {  SignUpButton, UserButton } from "@clerk/nextjs";
 
@@ -34,7 +34,7 @@ export function Header() {
 
                         <div className="flex w-[180px] flex-row justify-between items-center">
 
-                            <UserButton userProfileUrl="/profile" afterSignOutUrl="/signin" />
+                            <UserButton userProfileUrl="/profile" afterSignOutUrl="/" />
                             <SignInButton />
                             <SignUpButton />
                         </div>
