@@ -10,8 +10,8 @@ export default function Home() {
         <h1 className="text-6xl"> Authorization demo with clerk. </h1>
       </main>
       <div className="container px-5 py-12 mx-auto flex flex-col lg:flex-row justify-between">
-        <Card title="Sign in" description="Login your exxting account, just enter your email and password. " signType="signIn" />
-        <Card title="Sign up" description="Create the new account just enter the basis information like name, email, username, password" signType="signUp" />
+        <Card title="Sign in" description="Log in to your existing account; enter your email and password." signType="signIn" />
+        <Card title="Sign up" description="To create the new account, enter the basic information like name, email, username, and password." signType="signUp" />
       </div>
 
     </>
