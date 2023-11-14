@@ -1,7 +1,5 @@
 import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 
-// import {  SignUpButton, UserButton } from "@clerk/nextjs";
-
 import Link from "next/link";
 
 export function Header() {
